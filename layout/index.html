@@ -9,11 +9,7 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,16 +20,92 @@
     <title>Document</title>
   </head> 
   <body>
+    <nav class="menu-toggle" id="menu-toggle">
+      <div class="home-back">
+        <div class="button-Homeback"><i class='bx bxs-home hideHome' id="Home"></i></div>
+        <div class="button-Homeback"><a href="#"><i class='bx bx-arrow-back hideHome' id="back"></i></a></div>
+      </div>
+      <ul class="menu-toggle-mobile">
+        <li><label class="link-mobile colum1">MIỀN BẮC</label></li>
+        <li><label class="link-mobile colum2">TOUR MIỀN TRUNG</label></li>
+        <li><label class="link-mobile colum3">MIỀN NAM</label></li>
+        <li><label class="link-mobile colum4">TOUR MIỀN TÂY NAM BỘ</label></li>
+        <li><label class="link-mobile colum5">TOUR KHÁCH ĐOÀN</label></li>
+      </ul>
+    </nav>
+    <nav class="menu-con" id="menu-con1">
+      <div class="home-back">
+        <div class="button-Homeback2" id="button-Homeback1"><i class='bx bxs-home hideHome2' id="Home"></i></div>
+        <div class="button-Homeback2" id="button-Homeback1"><a href="#"><i class='bx bx-x hideHome2' id="back1"></i></a></div>
+      </div>
+      <ul class="menu-toggle-mobile">
+        <li><label class="link-mobile2 link-menu-con1">Du lịch Hà Nội</label></li>
+        <li><label class="link-mobile2 link-menu-con1">Du lịch Miền Bắc</label></li>
+        <li><label class="link-mobile2 link-menu-con1">Du lịch Hạ Long</label></li>
+        <li><label class="link-mobile2 link-menu-con1">Du lịch Sapa</label></li>
+        <li><label class="link-mobile2 link-menu-con1">Du lịnh Đông - Tây Bắc</label></li>
+      </ul>
+    </nav>
+    <nav class="menu-con" id="menu-con2">
+      <div class="home-back">
+        <div class="button-Homeback2" id="button-Homeback2"><i class='bx bxs-home hideHome2' id="Home"></i></div>
+        <div class="button-Homeback2" id="button-Homeback2"><a href="#"><i class='bx bx-x hideHome2' id="back2"></i></a></div>
+      </div>
+      <ul class="menu-toggle-mobile">
+        <li><label class="link-mobile2 link-menu-con2">Du lịch Đà Nẵng - Hội An</label></li>
+        <li><label class="link-mobile2 link-menu-con2">Du lịch Quy Nhơn - Tùy Hóa</label></li>
+        <li><label class="link-mobile2 link-menu-con2">Du lịch Quảng Bình - Quảng Ngãi</label></li>
+        <li><label class="link-mobile2 link-menu-con2">Du lịch Huế</label></li>
+        <li><label class="link-mobile2 link-menu-con2">Du lịnh Tây Nguyên</label></li>
+      </ul>
+    </nav>
+    <nav class="menu-con" id="menu-con3">
+      <div class="home-back">
+        <div class="button-Homeback2" id="button-Homeback3"><i class='bx bxs-home hideHome2' id="Home"></i></div>
+        <div class="button-Homeback2" id="button-Homeback3"><a href="#"><i class='bx bx-x hideHome2' id="back3"></i></a></div>
+      </div>
+      <ul class="menu-toggle-mobile">
+        <li><label class="link-mobile2 link-menu-con3">Du lịch Phú Quốc</label></li>
+        <li><label class="link-mobile2 link-menu-con3">Du lịch Nha Trang</label></li>
+        <li><label class="link-mobile2 link-menu-con3">Du lịch TP. Hồ Chí Minh</label></li>
+        <li><label class="link-mobile2 link-menu-con3">Du lịch Côn Đảo</label></li>
+        <li><label class="link-mobile2 link-menu-con3">Du lịnh Đà Lạt</label></li>
+      </ul>
+    </nav>
+    <nav class="menu-con" id="menu-con4">
+      <div class="home-back">
+        <div class="button-Homeback2" id="button-Homeback4"><i class='bx bxs-home hideHome2' id="Home"></i></div>
+        <div class="button-Homeback2" id="button-Homeback4"><a href="#"><i class='bx bx-x hideHome2' id="back4"></i></a></div>
+      </div>
+      <ul class="menu-toggle-mobile">
+        <li><label class="link-mobile2 link-menu-con4">Du lịch Tiền Giang</label></li>
+        <li><label class="link-mobile2 link-menu-con4">Du lịch Cần Thơ</label></li>
+        <li><label class="link-mobile2 link-menu-con4">Du lịch Vĩnh Long</label></li>
+        <li><label class="link-mobile2 link-menu-con4">Du lịch Sóc Trăng</label></li>
+      </ul>
+    </nav>
+    <nav class="menu-con" id="menu-con5">
+      <div class="home-back">
+        <div class="button-Homeback2" id="button-Homeback5"><i class='bx bxs-home hideHome2' id="Home"></i></div>
+        <div class="button-Homeback2" id="button-Homeback5"><a href="#"><i class='bx bx-x hideHome2' id="back5"></i></a></div>
+      </div>
+      <ul class="menu-toggle-mobile">
+        <li><label class="link-mobile2 link-menu-con5">Cát Bà - Cô Tô - Quan Lạn</label></li>
+        <li><label class="link-mobile2 link-menu-con5">Hạ Long - Móng Cái</label></li>
+        <li><label class="link-mobile2 link-menu-con5">Sầm Sơn - Hải Tiến - Cửa Lò</label></li>
+        <li><label class="link-mobile2 link-menu-con5">Hà Tĩnh - Quảng Bình</label></li>
+      </ul>
+    </nav>
     <div class="container-fluid p-0 bg-light">
   <!-- HEADER -->
       <div class="row">
         <div class="wapper1">
           <div class="top-header">
             <nav>
-              <ul id="connect">
+              <ul id="connect1">
                 <li>
                   <a href=""
-                    ><ion-icon name="call-outline"></ion-icon>
+                    ><i class='bx bxs-phone' ></i>
                     <table>
                       0357xxxxxxx
                     </table>
@@ -41,7 +113,7 @@
                 </li>
                 <li>
                   <a href=""
-                    ><ion-icon name="mail-outline"></ion-icon>
+                    ><i class='bx bxl-gmail' ></i>
                     <table>
                       phihoangha@gmail.com
                     </table>
@@ -50,15 +122,15 @@
               </ul>
             </nav>
             <nav>
-              <ul id="connect">
+              <ul id="connect2">
                 <li>
-                  <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                  <a href=""><i class='bx bxl-facebook-circle' ></i></a>
                 </li>
                 <li>
-                  <a href=""><ion-icon name="logo-flickr"></ion-icon></a>
+                  <a href=""><i class='bx bxs-message-alt-dots' ></i></a>
                 </li>
                 <li>
-                  <a href=""><ion-icon name="logo-google"></ion-icon></a>
+                  <a href=""><i class='bx bxl-google' ></i></a>
                 </li>
               </ul>
             </nav>
@@ -68,10 +140,10 @@
           <header class="style-header">
             <div class="inner-header container">
               <a href="" id="logo">T&T Travel</a>
-              <div class="toggle">
-                <ion-icon name="menu-outline"></ion-icon>
+              <div class="toggle" id="toggle">
+                <ion-icon name="menu-outline" class="menu-mobile"></ion-icon>
               </div>
-              <nav>
+              <nav class="nav-menu">
                 <ul class="main-menu">
                   <li>
                     <a href="" class="document-a">MIỀN BẮC</a>
@@ -190,7 +262,7 @@
       <!-- START CONTENTS -->
       <div class="container">
         <!-- START CONTENTS__LOCATION -->
-        <div class="row my-5">
+        <div class="row my-5 justify-content-center">
           <h2 class="my-3 text-center fw-bold">ĐỊA ĐIỂM NỔI BẬT</h2>
 
           <article class="mt-3 row row-cols-1 row-cols-md-12 row-gap-3">
@@ -292,7 +364,7 @@
         </div>
         <!-- END CONTENTS__LOCATION -->
         <!-- START CONTENTS__BEST TOUR -->
-        <div class="row my-5">
+        <div class="row my-5 justify-content-center">
           <h2 class="my-3 text-center fw-bold">TOUR NỔI BẬT</h2>
 
           <article class="mt-3 row row-cols-1 row-cols-md-4 row-gap-3">
@@ -432,7 +504,7 @@
         </div>
         <!-- END CONTENTS__BEST TOUR -->
         <!-- START CONTENTS__RECOMMEND TOUR -->
-        <div class="row my-5">
+        <div class="row my-5 justify-content-center">
           <h2 class="my-3 text-center fw-bold">TOUR KHUYẾN NGHỊ</h2>
 
           <article class="mt-3 row row-cols-1 row-cols-md-4 row-gap-3">
@@ -573,7 +645,7 @@
         <!-- END CONTENTS__RECOMMEND TOUR -->
 
         <!-- START CONTENTS__WHYCHOOSE -->
-        <div class="row my-5">
+        <div class="row my-5 justify-content-center">
           <div class="container">
             <h2 class="my-3 text-center fw-bold">Vì sao chọn T&T Travel</h2>
             <div class="row">
@@ -619,7 +691,7 @@
         <!-- END CONTENTS__WHYCHOOSE -->
 
         <!-- START CONTENTS__FEEDBACK -->
-        <div class="row my-5"></div>
+        <div class="row my-5 justify-content-center"></div>
         <div class="container">
           <h2 class="my-3 text-center fw-bold">
             Khách hàng nói gì về T&T Travel
@@ -727,10 +799,74 @@
             if ($(this).scrollTop()) {
               $("header").addClass("sticky");
             } else {
-              $("header").removeClass("sticky");
+              $("header").removeClass("sticky");       
             }
           });
         });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $('#toggle').click(function(){
+            $('#menu-toggle').toggleClass('hide');
+            $('.link-mobile').toggleClass('show');    
+            $('.button-Homeback i').fadeToggle('hideHome');
+          })
+          $('#back').click(function(){
+            $('#menu-toggle').toggleClass('hide');
+            $('.link-mobile').toggleClass('show');    
+            $('.button-Homeback i').fadeToggle('hideHome');
+          })
+          $('.colum1').click(function(){
+            $('#menu-con1').toggleClass('hide');
+            $('.link-menu-con1').toggleClass('show');    
+            $('#button-Homeback1 i').fadeToggle('hideHome2');
+          })
+          $('#back1').click(function(){
+            $('#menu-con1').toggleClass('hide');
+            $('.link-menu-con1').toggleClass('show');    
+            $('#button-Homeback1 i').fadeToggle('hideHome2');
+          })
+          $('.colum2').click(function(){
+            $('#menu-con2').toggleClass('hide');
+            $('.link-menu-con2').toggleClass('show');    
+            $('#button-Homeback2 i').fadeToggle('hideHome2');
+          })
+          $('#back2').click(function(){
+            $('#menu-con2').toggleClass('hide');
+            $('.link-menu-con2').toggleClass('show');    
+            $('#button-Homeback2 i').fadeToggle('hideHome2');
+          })
+          $('.colum3').click(function(){
+            $('#menu-con3').toggleClass('hide');
+            $('.link-menu-con3').toggleClass('show');    
+            $('#button-Homeback3 i').fadeToggle('hideHome2');
+          })
+          $('#back3').click(function(){
+            $('#menu-con3').toggleClass('hide');
+            $('.link-menu-con3').toggleClass('show');    
+            $('#button-Homeback3 i').fadeToggle('hideHome2');
+          })
+          $('.colum4').click(function(){
+            $('#menu-con4').toggleClass('hide');
+            $('.link-menu-con4').toggleClass('show');    
+            $('#button-Homeback4 i').fadeToggle('hideHome2');
+          })
+          $('#back4').click(function(){
+            $('#menu-con4').toggleClass('hide');
+            $('.link-menu-con4').toggleClass('show');    
+            $('#button-Homeback4 i').fadeToggle('hideHome2');
+          })
+          $('.colum5').click(function(){
+            $('#menu-con5').toggleClass('hide');
+            $('.link-menu-con5').toggleClass('show');    
+            $('#button-Homeback5 i').fadeToggle('hideHome2');
+          })
+          $('#back5').click(function(){
+            $('#menu-con5').toggleClass('hide');
+            $('.link-menu-con5').toggleClass('show');    
+            $('#button-Homeback5 i').fadeToggle('hideHome2');
+          })
+        })
       </script>
       <!-- LOGIC STICKY HEADER -->
     </div>

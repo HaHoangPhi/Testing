@@ -14,16 +14,25 @@ a{
     justify-content: space-between;
     background: #8dcff5;
     width: 100%;
-    text-align: center;
+    align-items: center;
 }
-ul#connect{
+ul#connect1{
     display: flex;
+    margin: 0;
 }
-ul#connect a{
-    padding: 10px 20px;
+ul#connect1 a{
+    padding: 10px 10px;
     color: #fff;
     display: block;
-    text-align: center;
+}
+ul#connect2{
+    display: flex;
+    margin: 0;
+}
+ul#connect2 a{
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
 }
 #logo{
     color: #fff;
@@ -96,39 +105,162 @@ ul#connect a{
     padding: 20px 0px;
     transition: 0.9s ease-in-out;
     background: #00A2E3;
-    color: #fff;
+    color: #fff;    
 }
-.style-header.sticky{
-    z-index: 999;
-    position: fixed;
-    background: #00A2E3;
-    opacity: 0.9;
-    padding: 15px 0px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+
+/*css nut home back*/
+.home-back{
+    padding-top: 20px;
+    justify-content: space-between;
+    display: flex;
 }
-.style-header.sticky #main-menu a{
-    color: #fff;
-} 
-.style-header.sticky #logo{
-    color: #fff;
+.button-Homeback{
+    padding: 20px 20px 0px 20px;
+}
+.button-Homeback i{
+    color: #088cc0;
+    font-size: 25px;
+    display: none;
+}
+.button-Homeback2{
+    padding: 20px 20px 0px 20px;
+}
+.button-Homeback2 i{
+    color: #088cc0;
+    font-size: 25px;
+    display: none;
+}
+/*hết css home back*/
+/*css menu-toggle*/
+.menu-toggle.hide{
+    width: 70%;
+}
+.menu-con.hide{
+    width: 70%;
+}
+.link-mobile.show{
+    width: 100%;
+    font-size: 0.9em;
+    transition:ease-in-out 0.5s; 
+}
+.link-mobile2.show{
+    width: 100%;
+    font-size: 1em;
+    transition: ease-in-out 0.8s; 
 }
 @media screen and (max-width: 700px){
     .main-menu{
         flex-direction: column;
         font-size: 10px;
     }
-    nav{
+    .nav-menu{
         display: none;
+    }
+    .menu-toggle{
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        background: #f1f1f1;
+        z-index: 999;
+        border: #bbb6b6 solid 1px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        opacity: 0.9;
+        transition: ease-in-out 0.5s;
+    }
+    .menu-con{
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        background: #f1f1f1;
+        z-index: 1000;
+        border: #bbb6b6 solid 1px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        transition: ease-in-out 0.5s;
+    }
+    .menu-toggle-mobile{
+        width: 100%;
+        padding-top: 30%;
+        padding-left: 15px;
+        padding-right: 15px;       
+    }
+    .link-mobile{
+        color: #00A2E3;
+        font-size: 0.9em;
+        width: 0%;
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 0px 15px 30px;  
+        font-size: 0;
+    }
+    .link-mobile2{
+        color: #00A2E3;
+        font-size: 0.9em;
+        width: 0%;
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 0px 15px 30px;  
+        font-size: 0;
+    }
+    .menu-toggle-mobile li{
+        border-bottom: #00A2E3 solid 2px;
+        width: auto;
     }
     .toggle{
         display: block;
+        text-align: right;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    /*top header mobile*/
+    .top-header{
+        height: 50px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    ul#connect1{
+        display: inline;
+        padding: 0;
+        margin: 0;
+    }
+    ul#connect1 a{
+        padding: 0px;
+        padding-left: 5px;
+        color: #fff;
+        display: block;
+    }
+    ul#connect2{
+        display: flex;
+        margin: 0;
+    }
+    ul#connect2 a{
+        color: #fff;
+        display: block;
+        text-align: center;
     }
 }
 @media screen and (min-width: 700px){
-    .toggle{
-        display: none;
+    .menu-toggle{display: none;}
+    .toggle{display: none;}
+    .menu-toggle-mobile{display: none;}
+    .style-header.sticky{
+        z-index: 998;
+        position: fixed;
+        background: #00A2E3;
+        opacity: 0.9;
+        padding: 15px 0px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        transition: linear 0.5s;
+    }
+    .style-header.sticky #main-menu a{
+        color: #fff;
+    } 
+    .style-header.sticky #logo{
+        color: #fff;
     }
 }
+/*Hết css menu mobile*/
 /*footer*/
 #content h1{
     padding: 30px 0px;
