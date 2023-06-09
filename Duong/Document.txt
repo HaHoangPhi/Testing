@@ -1,0 +1,9 @@
+Main
+
+Content :+ 1x1 item cho điện thoại
+		 + 2x2 cho ipad
+		 + 4x4 cho laptop trở lên
++ Fake header + none footer
++ Địa điểm nổi bật chưa responsive + tương tác
++ Modal đặt tour : Item đầu của tour nổi bật
++ Chưa tối ưu tên id
