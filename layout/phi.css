@@ -242,6 +242,14 @@ ul#connect2 a{
         display: block;
         text-align: center;
     }
+    #banner{
+        background: url(img/bgtravel.jpg);
+        background-size:cover;
+        background-position: center top;
+        min-height: 234.062px;
+        width: 100%;
+    
+    }
 }
 @media screen and (min-width: 700px){
     .menu-toggle{display: none;}
@@ -296,9 +304,10 @@ ul#connect2 a{
 .colum{
     width: 25%;
 }
-.colum2{
+.colum-2{
     width: 50%;
-    text-align: center
+    text-align: center;
+    
 }
 .colum H3{
     font-size: 1.2em;
@@ -323,4 +332,48 @@ footer{
 }
 .linkFB{
     padding-left: 50px;
+}
+.img-card{
+    padding-top: 15px;
+    width: 120%;
+    height: 120%
+}
+.colum ul{
+    padding: 0px;
+}
+.colum-2 ul{
+    padding: 0px;
+}
+@media screen and (max-width: 700px){
+    footer{
+        font-size: 1em;
+    }
+    .row-footer{
+        display: block;
+    }
+    .colum{
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px 0px 20px;
+        margin: 0px;
+    }
+    .img-card{
+        padding-top: 15px;
+        width: 100%;
+        height: 100%
+    }
+
+    .row-footer2{
+        display: block;
+    }
+    .colum-2{
+        width: 100%;
+        text-align: center;
+        padding: 0px 20px 0px 20px;
+        margin: 0px;
+        
+    }
+    .content-H3{
+        font-size: 1.1em;
+    }
 }
