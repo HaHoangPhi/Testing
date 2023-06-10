@@ -38,7 +38,8 @@ ul#connect2 a{
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
     letter-spacing: 2px;
 }
 
@@ -56,6 +57,7 @@ ul#connect2 a{
     color: #fff;
     display: block; 
     font-weight: bold;
+    
 }
 .main-menu li{
     position: relative;
