@@ -12,14 +12,33 @@
     object-fit: cover;
 }
 
+/*custom css*/
 
-/*custom carousel*/
 
 .c-item {
-    max-height: 85vh;
+    height: 80vh;
 }
 
 .c-img {
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
+
+
+/*responsive carousel*/
+
+@media (max-width: 767.98px) { 
+    .c-item {
+        height: 20vh;
+    }
+}
+
+@media (max-width: 1199.98px){
+    .c-item {
+        height: 40vh;
+    }
+}
+
+
+
