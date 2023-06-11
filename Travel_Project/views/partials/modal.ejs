@@ -1,0 +1,83 @@
+<div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Booking form
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-bottom">
+            <div>
+              <p>Tên Tour :<b> Tour du lịch Đà Nẵng</b></p>
+              <p>Giá Tour : <span style="color: red"> 190.000 </span>VNĐ</p>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form action="" id="datTour">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Họ và tên <span style="color: red">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  required
+                />
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Số điện thoại <span style="color: red">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  required
+                />
+              </div>
+              <div class="mb-2">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-2">
+                <label for="message-text" class="col-form-label"
+                  >Message:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Thoát
+            </button>
+            <button type="submit" form="datTour" class="btn btn-primary">
+              Đặt Tour
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
