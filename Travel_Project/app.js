@@ -15,7 +15,6 @@ app.use(ejsLayouts);
 
 //Static file
 app.use("/public", express.static(__dirname + "/public"));
-
 const PORT = 3000;
 
 
