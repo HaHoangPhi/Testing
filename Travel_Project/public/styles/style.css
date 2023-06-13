@@ -40,5 +40,10 @@
     }
 }
 
+@media (orientation: landscape) {
+    .c-item {
+        height: 80vh;
+    }
+}
 
 
