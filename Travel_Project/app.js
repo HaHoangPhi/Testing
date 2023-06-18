@@ -5,7 +5,6 @@ const fakeData = require("./fakedata/fakeToursdata.json");
 const express = require("express");
 const ejs = require("ejs");
 const ejsLayouts = require("express-ejs-layouts");
-const nodeMailer = require("nodemailer");
 
 const app = express();
 
@@ -24,11 +23,12 @@ app.use("/public", express.static(__dirname + "/public"));
 const PORT = 3000;
 
 //nodemailer
-
+const homerouter = require('./router/home.router');
+app.use('/',homerouter);
 //Get home page
-app.get("/", (req, res) => {
-  return res.render("../index", { title: "Trang chủ", tours: fakeData });
-});
+//app.get("/", (req, res) => {
+//  return res.render("../index", { title: "Trang chủ", tours: fakeData });
+//});
 
 app.post("/",(req, res) => {
   const hovaten = req.body;
