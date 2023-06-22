@@ -4,7 +4,7 @@ const mysql = require('mysql');
     port: 3306,
     user: 'root',
     password: 'Phi12345',
-    database: 'ql_tour'
+    database: 'webdulich'
  });
  
 connection.connect(function(err) {

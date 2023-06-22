@@ -29,7 +29,6 @@ app.use('/',homerouter);
 //app.get("/", (req, res) => {
 //  return res.render("../index", { title: "Trang chủ", tours: fakeData });
 //});
-
 app.post("/",(req, res) => {
   const hovaten = req.body;
   console.log(hovaten);

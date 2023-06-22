@@ -86,23 +86,23 @@
       </div>
 
       <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
-        <% tours.map(item=>{ %>
+        <% tournoibat.map(item=>{ %>
           <div class="col">
             <div class="card h-100">
-              <img src=<%=item.Anh%> class="card-img-top" alt="...">
+              <img src=<%=item.hinhanh%> class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">
-                  <%=item.TenTour%>
+                  <%=item.ten_tour%>
                 </h5>
                 <p class="card-text">
-                  <%=item.description%>
+                  <%=item.noidung%>
                 </p>
               </div>
               <div class="card-body d-flex justify-content-between align-items-center">
                 <span class="card-text">
-                  <%=item.Gia%> VND
+                  <%=item.gia%> VND
                 </span>
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Best-Modal-<%= item.MaTour %>">Đặt
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Best-Modal-<%= item.ma_tour %>">Đặt
                   Tour</a>
               </div>
             </div>
@@ -110,7 +110,7 @@
 
           <!--BEST TOUR MODAL-->
 
-          <div class="modal fade" id="Best-Modal-<%= item.MaTour %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="Best-Modal-<%= item.ma_tour %>" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -122,16 +122,16 @@
                 </div>
                 <div class="modal-body border-bottom">
                   <div>
-                    <p>Tên Tour :<b> <%=item.TenTour%></b></p>
-                    <p>Giá Tour : <span style="color: red"> <%=item.Gia%> </span>VNĐ</p>
+                    <p>Tên Tour :<b> <%=item.ten_tour%></b></p>
+                    <p>Giá Tour : <span style="color: red"> <%=item.gia%> </span>VNĐ</p>
                   </div>
                 </div>
                 <div class="modal-body">
-                  <form action="/" id="datTour-besttour-<%= item.MaTour %>" method="post" onsubmit="(alert('succcess'))">
+                  <form action="/" id="datTour-besttour-<%= item.ma_tour %>" method="post" onsubmit="(alert('succcess'))">
                     <div class d-none>
-                      <input type="hidden" name="matour" value="<%=  item.MaTour %>">
-                      <input type="hidden" name="tentour" value="<%= item.TenTour %>">
-                      <input type="hidden" name="giatour" value="<%= item.Gia %>">
+                      <input type="hidden" name="matour" value="<%=  item.ma_tour %>">
+                      <input type="hidden" name="tentour" value="<%= item.ten_tour %>">
+                      <input type="hidden" name="giatour" value="<%= item.gia %>">
                     </div>
                     <div class="mb-2">
                       <label for="hovaten" class="form-label"> Họ và tên <span style="color: red">*</span></label>
@@ -155,7 +155,7 @@
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                     Thoát
                   </button>
-                  <button type="submit" form="datTour-besttour-<%= item.MaTour %>" class="btn btn-primary">
+                  <button type="submit" form="datTour-besttour-<%= item.ma_tour %>" class="btn btn-primary">
                     Đặt Tour
                   </button>
                 </div>
@@ -179,24 +179,23 @@
       </div>
 
       <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
-        <% tours.map(item=>{ %>
+        <% tourhalongs.map(item=>{ %>
           <div class="col">
             <div class="card h-100">
-              <img src=<%=item.Anh%> class="card-img-top" alt="...">
+              <img src=<%=item.hinhanh%> class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">
-                  <%=item.TenTour%>
+                  <%=item.ten_tour%>
                 </h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make
-                  up the bulk of the card's content.
+                  <%=item.noidung%>
                 </p>
               </div>
               <div class="card-body d-flex justify-content-between align-items-center">
                 <span class="card-text">
-                  <%=item.Gia%> VND
+                  <%=item.gia%> VND
                 </span>
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#HaLong-Modal-<%= item.MaTour %>">Đặt
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#HaLong-Modal-<%= item.ma_tour %>">Đặt
                   Tour</a>
               </div>
             </div>
@@ -204,7 +203,7 @@
 
           <!--HA LONG TOUR MODAL-->
 
-          <div class="modal fade" id="HaLong-Modal-<%= item.MaTour %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="HaLong-Modal-<%= item.ma_tour %>" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -216,16 +215,16 @@
                 </div>
                 <div class="modal-body border-bottom">
                   <div>
-                    <p>Tên Tour :<b> <%=item.TenTour%></b></p>
-                    <p>Giá Tour : <span style="color: red"> <%=item.Gia%> </span>VNĐ</p>
+                    <p>Tên Tour :<b> <%=item.ten_tour%></b></p>
+                    <p>Giá Tour : <span style="color: red"> <%=item.gia%> </span>VNĐ</p>
                   </div>
                 </div>
                 <div class="modal-body">
-                  <form action="/" id="datTour-halong-<%= item.MaTour %>" method="post" onsubmit="(alert('succcess'))">
+                  <form action="/" id="datTour-halong-<%= item.ma_tour %>" method="post" onsubmit="(alert('succcess'))">
                     <div class d-none>
-                      <input type="hidden" name="matour" value="<%=  item.MaTour %>">
-                      <input type="hidden" name="tentour" value="<%= item.TenTour %>">
-                      <input type="hidden" name="giatour" value="<%= item.Gia %>">
+                      <input type="hidden" name="matour" value="<%=  item.ma_tour %>">
+                      <input type="hidden" name="tentour" value="<%= item.ten_tour %>">
+                      <input type="hidden" name="giatour" value="<%= item.gia %>">
                     </div>
                     <div class="mb-2">
                       <label for="hovaten" class="form-label"> Họ và tên <span style="color: red">*</span></label>
@@ -249,7 +248,7 @@
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                     Thoát
                   </button>
-                  <button type="submit" form="datTour-halong-<%= item.MaTour %>" class="btn btn-primary">
+                  <button type="submit" form="datTour-halong-<%= item.ma_tour %>" class="btn btn-primary">
                     Đặt Tour
                   </button>
                 </div>
@@ -272,25 +271,24 @@
       </div>
 
       <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
-        <% tours.map(item=>{ %>
+        <% tourSapa.map(item=>{ %>
           <div class="col">
             <div class="card h-100">
-              <img src=<%=item.Anh%> class="card-img-top" alt="...">
+              <img src=<%=item.hinhanh%> class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">
-                  <%=item.TenTour%>
+                  <%=item.ten_tour%>
                 </h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make
-                  up the bulk of the card's content.
+                  <%=item.noidung%>
                 </p>
               </div>
               <div class="card-body d-flex justify-content-between align-items-center">
                 <span class="card-text">
-                  <%=item.Gia%> VND
+                  <%=item.gia%> VND
                 </span>
                 <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                  data-bs-target="#Sapa-Modal-<%= item.MaTour %>">Đặt
+                  data-bs-target="#Sapa-Modal-<%= item.ma_tour %>">Đặt
                   Tour</a>
               </div>
             </div>
@@ -298,7 +296,7 @@
 
           <!--SAPA TOURS_MODALS-->
 
-          <div class="modal fade" id="Sapa-Modal-<%= item.MaTour %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="Sapa-Modal-<%= item.ma_tour %>" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -310,16 +308,16 @@
                 </div>
                 <div class="modal-body border-bottom">
                   <div>
-                    <p>Tên Tour :<b> <%=item.TenTour%></b></p>
-                    <p>Giá Tour : <span style="color: red"> <%=item.Gia%> </span>VNĐ</p>
+                    <p>Tên Tour :<b> <%=item.ten_tour%></b></p>
+                    <p>Giá Tour : <span style="color: red"> <%=item.gia%> </span>VNĐ</p>
                   </div>
                 </div>
                 <div class="modal-body">
-                  <form action="/" id="datTour-sapa-<%= item.MaTour %>" method="post" onsubmit="(alert('succcess'))">
+                  <form action="/" id="datTour-sapa-<%= item.ma_tour %>" method="post" onsubmit="(alert('succcess'))">
                     <div class d-none>
-                      <input type="hidden" name="matour" value="<%=  item.MaTour %>">
-                      <input type="hidden" name="tentour" value="<%= item.TenTour %>">
-                      <input type="hidden" name="giatour" value="<%= item.Gia %>">
+                      <input type="hidden" name="matour" value="<%=  item.ma_tour %>">
+                      <input type="hidden" name="tentour" value="<%= item.ten_tour %>">
+                      <input type="hidden" name="giatour" value="<%= item.gia %>">
                     </div>
                     <div class="mb-2">
                       <label for="hovaten" class="form-label"> Họ và tên <span style="color: red">*</span></label>
@@ -343,7 +341,7 @@
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                     Thoát
                   </button>
-                  <button type="submit" form="datTour-sapa-<%= item.MaTour %>" class="btn btn-primary">
+                  <button type="submit" form="datTour-sapa-<%= item.ma_tour %>" class="btn btn-primary">
                     Đặt Tour
                   </button>
                 </div>
