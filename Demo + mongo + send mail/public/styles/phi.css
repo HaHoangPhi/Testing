@@ -1,0 +1,481 @@
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 0px auto;
+    max-width: 1280px;
+}
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    background: #8dcff5;
+    width: 100%;
+    align-items: center;
+}
+ul#connect1{
+    display: flex;
+    margin: 0;
+}
+ul#connect1 a{
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
+}
+ul#connect2{
+    display: flex;
+    margin: 0;
+}
+ul#connect2 a{
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
+}
+#logo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.inner-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-menu{
+    display: flex;
+    margin-bottom: 0px;
+}
+.main-menu a{
+    padding: 10px 20px;
+    color: #fff;
+    display: block; 
+    font-weight: bold;
+    
+}
+.main-menu li{
+    position: relative;
+}
+.main-menu li:hover .document-a{
+    background: #088cc0;
+    color: #fff;
+    transition: all 0.5s;
+}
+.main-menu li:hover .sub-menu{
+    display: block;
+}
+.sub-menu{
+    position: absolute;
+    background:#f5f5f5;
+    padding: 0px 0px;
+    width: 250px;
+    display: none;
+    z-index: 999;
+}
+.sub-menu a{
+    padding: 8px 15px;
+    background: #262626;
+    color: #bbb6b6;
+    font-size: 0.8em;
+}
+.sub-menu li:hover .document-sub-menu{
+    border-bottom: 1px solid white;
+    background: #00A2E3;
+    color: #fff;
+    font-size: 0.9em;
+    transition: 0.5s;
+}
+#banner{
+    background: url(img/bgtravel.jpg);
+    background-size:cover;
+    background-position: center top;
+    min-height: 567.062px;
+    width: 100%;
+
+}
+.style-header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 20px 0px;
+    transition: 0.9s ease-in-out;
+    background: #00A2E3;
+    color: #fff;    
+}
+
+/*css nut home back*/
+.home-back{
+    padding-top: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+.button-Homeback{
+    padding: 20px 20px 0px 20px;
+}
+.button-Homeback i{
+    color: #088cc0;
+    font-size: 25px;
+    display: none;
+}
+.button-Homeback2{
+    padding: 20px 20px 0px 20px;
+}
+.button-Homeback2 i{
+    color: #088cc0;
+    font-size: 25px;
+    display: none;
+}
+/*hết css home back*/
+/*css menu-toggle*/
+.Div-Menu{
+    width: auto;
+    height: auto;
+    transition: ease-in-out 0.5s;
+}
+.menu-toggle.hide{
+    width: 70%;
+}
+.menu-con.hide{
+    width: 70%;
+}
+.link-mobile.show{
+    width: 100%;
+    font-size: 0.9em;
+    transition:ease-in-out 0.5s; 
+}
+.link-mobile2.show{
+    width: 100%;
+    font-size: 1em;
+    transition: ease-in-out 0.8s; 
+}
+/*màn ngang điện thoại*/
+@media screen and (max-width: 1000px){
+    .main-menu{
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .menu-toggle{
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        background: #f1f1f1;
+        z-index: 999;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        opacity: 0.9;
+        transition: ease-in-out 0.5s;
+    }
+    .menu-con{
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        background: #f1f1f1;
+        z-index: 1000;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        transition: ease-in-out 0.5s;
+    }
+    .menu-toggle-mobile{
+        width: 100%;
+        padding-top: 0%;
+        padding-left: 15px;
+        padding-right: 15px;       
+    }
+    .link-mobile{
+        color: #00A2E3;
+        font-size: 0.9em;
+        width: 0%;
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 0px 15px 30px;  
+        font-size: 0;
+    }
+    .link-mobile2{
+        color: #00A2E3;
+        font-size: 0.9em;
+        width: 0%;
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 0px 15px 30px;  
+        font-size: 0;
+    }
+    .menu-toggle-mobile li{
+        border-bottom: #00A2E3 solid 2px;
+        width: auto;
+    }
+    .toggle{
+        display: block;
+        text-align: right;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    /*top header mobile*/
+    .top-header{
+        height: 50px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    ul#connect1{
+        display: inline;
+        padding: 0;
+        margin: 0;
+    }
+    ul#connect1 a{
+        padding: 0px;
+        padding-left: 5px;
+        color: #fff;
+        display: block;
+    }
+    ul#connect2{
+        display: flex;
+        margin: 0;
+    }
+    ul#connect2 a{
+        color: #fff;
+        display: block;
+        text-align: center;
+    }
+    #banner{
+        background: url(img/bgtravel.jpg);
+        background-size:cover;
+        background-position: center top;
+        min-height: 234.062px;
+        width: 100%;
+    }
+}
+/*Màn dọc điện thoại*/
+@media screen and (max-width: 450px){
+    .main-menu{
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .menu-toggle{
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        background: #f1f1f1;
+        z-index: 999;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        opacity: 0.9;
+        transition: ease-in-out 0.5s;
+    }
+    .menu-con{
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        background: #f1f1f1;
+        z-index: 1000;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        transition: ease-in-out 0.5s;
+    }
+    .menu-toggle-mobile{
+        width: 100%;
+        padding-top: 30%;
+        padding-left: 15px;
+        padding-right: 15px;       
+    }
+    .link-mobile{
+        color: #00A2E3;
+        font-size: 0.9em;
+        width: 0%;
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 0px 15px 30px;  
+        font-size: 0;
+    }
+    .link-mobile2{
+        color: #00A2E3;
+        font-size: 0.9em;
+        width: 0%;
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 0px 15px 30px;  
+        font-size: 0;
+    }
+    .menu-toggle-mobile li{
+        border-bottom: #00A2E3 solid 2px;
+        width: auto;
+    }
+    .toggle{
+        display: block;
+        text-align: right;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    /*top header mobile*/
+    .top-header{
+        height: 50px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    ul#connect1{
+        display: inline;
+        padding: 0;
+        margin: 0;
+    }
+    ul#connect1 a{
+        padding: 0px;
+        padding-left: 5px;
+        color: #fff;
+        display: block;
+    }
+    ul#connect2{
+        display: flex;
+        margin: 0;
+    }
+    ul#connect2 a{
+        color: #fff;
+        display: block;
+        text-align: center;
+    }
+    #banner{
+        background: url(img/bgtravel.jpg);
+        background-size:cover;
+        background-position: center top;
+        min-height: 234.062px;
+        width: 100%;
+    
+    }
+}
+/*giao diện pc*/
+@media screen and (min-width: 1000px){
+    .menu-toggle{display: none;}
+    .toggle{display: none;}
+    .menu-toggle-mobile{display: none;}
+    .style-header.sticky{
+        z-index: 998;
+        position: fixed;
+        background: #00A2E3;
+        opacity: 0.9;
+        padding: 15px 0px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        transition: linear 0.5s;
+    }
+    .style-header.sticky #main-menu a{
+        color: #fff;
+    } 
+    .style-header.sticky #logo{
+        color: #fff;
+    }
+    .Div-Menu{display: none;}
+}
+/*Hết css menu mobile*/
+/*footer*/
+#content h1{
+    padding: 30px 0px;
+}
+
+#content p{
+    margin-bottom: 1.2rem;
+}
+
+
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.row-footer2{
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.footer{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.colum{
+    width: 25%;
+}
+.colum-2{
+    width: 50%;
+    text-align: center;
+    
+}
+.colum H3{
+    font-size: 1.2em;
+}
+.colum a{
+    color: #fff;
+}
+.colum h3{
+    padding-bottom: 15px;
+}
+footer{
+    font-size: 1.1em;
+    background: #00A2E3;
+    color: #fff;
+}
+.footer2{
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
+.content-H3 a{
+    color: #fff;
+}
+.linkFB{
+    padding-left: 50px;
+}
+.img-card{
+    padding-top: 15px;
+    width: 120%;
+    height: 120%
+}
+.colum ul{
+    padding: 0px;
+}
+.colum-2 ul{
+    padding: 0px;
+}
+@media screen and (max-width: 1000px){
+    footer{
+        font-size: 1em;
+    }
+    .row-footer{
+        display: block;
+    }
+    .colum{
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px 0px 20px;
+        margin: 0px;
+    }
+    .img-card{
+        padding-top: 15px;
+        width: 100%;
+        height: 100%
+    }
+
+    .row-footer2{
+        display: block;
+    }
+    .colum-2{
+        width: 100%;
+        text-align: center;
+        padding: 0px 20px 0px 20px;
+        margin: 0px;
+        
+    }
+    .content-H3{
+        font-size: 1.1em;
+    }
+}

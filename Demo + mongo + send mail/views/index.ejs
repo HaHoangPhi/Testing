@@ -1,0 +1,198 @@
+<!--Carousel-->
+<%- include ('./partials/carousel.ejs') %>
+  <!--Carousel-->
+  <!--Main Content-->
+  <div class="container">
+    <!-- START CONTENTS__LOCATION -->
+    <div class="my-5">
+      <div class="my-3">
+        <h2 class="text-center fw-bold line heading-1">
+          ĐỊA ĐIỂM NỔI BẬT
+        </h2>
+      </div>
+
+      <article class="mt-3 row row-cols-1  row-gap-3">
+        <div class="col col-lg-8">
+          <a href="/tours-ha-long/1">
+            <div class="card h-100">
+              <img src="../../public/images/Halong.jpg" class="card-img w-100 h-100" alt="...">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center ">
+                <p class="card-title display-2 fw-bold text-white opacity-80">
+                  Hạ Long
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col col-lg-4">
+          <a href="/tours-sapa">
+            <div class="card h-100">
+              <img src="../../public/images/sapa_vertical.jpg" class="card-img w-100 h-100" alt="...">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <p class="card-title display-3 fw-bold text-white opacity-80">
+                  Sapa
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col col-lg-4">
+          <a href="">
+            <div class="card h-100">
+              <img src="../../public/images/hn.jpg" class="card-img w-100 h-100" alt="...">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <p class="card-title fs-1 fw-bold text-white opacity-80">
+                  Trong nước
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col col-lg-4">
+          <a href="">
+            <div class="card h-100">
+              <img src="../../public/images/ncngoai.jpg" class="card-img w-100 h-100" alt="...">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <p class="card-title fs-1 fw-bold text-white opacity-80">
+                  Nước ngoài
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col col-lg-4">
+          <a href="">
+            <div class="card h-100">
+              <img src="../../public/images/cau.jpg" class="card-img w-100 h-100" alt="...">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <p class="card-title fs-1 fw-bold text-white opacity-80">
+                  Đà nẵng
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </article>
+    </div>
+    <!-- END CONTENTS__LOCATION -->
+    <!-- START CONTENTS__BEST TOUR -->
+    <div class="my-5">
+      <div class="my-3">
+        <h2 class=" text-center fw-bold">TOUR NỔI BẬT</h2>
+      </div>
+
+      <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
+        <% tours.map(item=>{ %>
+          <div class="col">
+            <div class="card h-100">
+              <img src=<%=item.Anh%> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=item.TenTour%>
+                </h5>
+                <p class="card-text">
+                  <%=item.description%>
+                </p>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <span class="card-text">
+                  <%=item.Gia%> VND
+                </span>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
+                  Tour</a>
+              </div>
+            </div>
+          </div>
+
+          <% }) %>
+      </article>
+    </div>
+    <!-- END CONTENTS__BEST TOUR -->
+    <!-- START CONTENTS__HA LONG TOUR -->
+    <div class="my-5">
+      <div class="my-3">
+        <h2 id="tourHalong" class="text-center fw-bold">
+          TOUR HẠ LONG
+        </h2>
+        <a class="link-underline link-underline-opacity-0" href="/tours-ha-long/1">
+          <p class="text-center text-info fs-5">Xem tất cả tour</p>
+        </a>
+      </div>
+
+      <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
+        <% halongTours.map(item=>{ %>
+          <div class="col">
+            <div class="card h-100">
+              <img src=<%=item.Anh%> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=item.TenTour%>
+                </h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <span class="card-text">
+                  <%=item.Gia%> VND
+                </span>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
+                  Tour</a>
+              </div>
+            </div>
+          </div>
+
+          <% }) %>
+      </article>
+    </div>
+    <!-- END CONTENTS__TOUR HA LONG -->
+    <!-- START CONTENTS__SAPA TOUR -->
+    <div class="my-5">
+      <div class="my-3">
+        <h2 id="tourSapa" class="text-center fw-bold">TOUR SAPA</h2>
+        <a class="link-underline link-underline-opacity-0" href="/tours-sapa">
+          <p class="text-center text-info fs-5">Xem tất cả tour</p>
+        </a>
+      </div>
+
+      <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
+        <% sapaTours.map(item=>{ %>
+          <div class="col">
+            <div class="card h-100">
+              <img src=<%=item.Anh%> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=item.TenTour%>
+                </h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <span class="card-text">
+                  <%=item.Gia%> VND
+                </span>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
+                  Tour</a>
+              </div>
+            </div>
+          </div>
+
+          <% }) %>
+      </article>
+    </div>
+    <!-- END CONTENTS__SAPA TOUR -->
+    <%- include('./hieu/whychoose.ejs') %>
+  </div>
+  <!--Main Content-->
+  <%- include ('./partials/modal.ejs') %>
+    <%- include ('./partials/modal_thank.ejs') %>
