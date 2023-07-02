@@ -1,18 +1,34 @@
 const productModel = require("../models/productModel");
 
 const getHomeproduct = async (req, res) => {
-  //get firt 4 tour for best tour
-  const bestTourdata = await productModel.find().skip().limit(4);
-  //get 8 for data halong
-  const halongData = await productModel.find().skip(4).limit(8);
-  //get 8 for data sapa
-  const sapaData = await productModel.find().skip(12).limit(8);
-  return res.render("../index", {
-    title: "Trang chủ",
-    tours: bestTourdata,
-    halongTours: halongData,
-    sapaTours: sapaData,
-  });
+  const userAgent = req.useragent;
+  if (userAgent.isMobile) {
+    //get firt 4 tour for best tour
+    const bestTourdata = await productModel.find().skip().limit(4);
+    //get 8 for data halong
+    const halongData = await productModel.find().skip(4).limit(4);
+    //get 8 for data sapa
+    const sapaData = await productModel.find().skip(12).limit(4);
+    return res.render("../index", {
+      title: "Trang chủ",
+      tours: bestTourdata,
+      halongTours: halongData,
+      sapaTours: sapaData,
+    });
+  } else {
+    //get firt 4 tour for best tour
+    const bestTourdata = await productModel.find().skip().limit(4);
+    //get 8 for data halong
+    const halongData = await productModel.find().skip(4).limit(8);
+    //get 8 for data sapa
+    const sapaData = await productModel.find().skip(12).limit(8);
+    return res.render("../index", {
+      title: "Trang chủ",
+      tours: bestTourdata,
+      halongTours: halongData,
+      sapaTours: sapaData,
+    });
+  }
 };
 
 const getHalongproduct = async (req, res) => {

@@ -12,6 +12,12 @@
     object-fit: cover;
 }
 
+.card-img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
 /*custom css*/
 
 
@@ -26,9 +32,22 @@
 }
 
 
+/*color button*/
+.btn-primary {
+    background-color: #00A2E3;
+    border-color: #00A2E3;
+}
+
+.btn-primary:hover{
+    background-color: #F8F9FA;
+    border-color: #00A2E3;
+    color: #00A2E3;
+}
+
+
 /*responsive carousel*/
 
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px)  { 
     .c-item {
         height: 20vh;
     }
@@ -37,6 +56,12 @@
 @media (max-width: 1199.98px){
     .c-item {
         height: 40vh;
+    }
+}
+
+@media (orientation:landscape) {
+    .c-item {
+        height: 80vh;
     }
 }
 

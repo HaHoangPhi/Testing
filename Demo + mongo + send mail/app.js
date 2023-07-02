@@ -3,6 +3,7 @@ const fakeData = require("./fakedata/fakeToursdata.json");
 
 //Thêm thư viện
 const express = require("express");
+const userAgent = require('express-useragent');
 const ejs = require("ejs");
 const helmet = require('helmet');
 const ejsLayouts = require("express-ejs-layouts");
@@ -34,6 +35,8 @@ app.use(helmet({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('common'));
+
+app.use(userAgent.express());
 
 
 //Static file
