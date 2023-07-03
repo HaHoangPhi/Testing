@@ -38,10 +38,15 @@ const getHalongproduct = async (req, res) => {
     .find()
     .skip(perPage * page - perPage)
     .limit(perPage);
+
+  let count = await productModel.countDocuments();
+  console.log(count);
+
   res.render("../pages/tour-ha-long", {
     title: "Đặt Tour hạ long",
     tours: data,
-    page: page,
+    current: page,
+    pages: Math.ceil(count / perPage),
   });
 };
 

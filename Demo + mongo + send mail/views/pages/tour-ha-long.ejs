@@ -37,17 +37,39 @@
           <% }) %>
       </article>
   </div>
+
   <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
+        <% if(current == 1) { %>
           <li class="page-item disabled">
-              <a class="page-link">Previous</a>
+            <a class="page-link">Previous</a>
           </li>
-          <li class="page-item"><a class="page-link" href="/tours-ha-long/1">1</a></li>
-          <li class="page-item"><a class="page-link" href="/tours-ha-long/2">2</a></li>
-          <li class="page-item"><a class="page-link" href="/tours-ha-long/3">3</a></li>
+        <% }else { %>
           <li class="page-item">
+            <a class="page-link">Previous</a>
+        </li>
+        <% } %>
+          
+        <% for(let i = 1;i<=pages;i++){ %>
+          <%if(i==current){ %>
+            <li class="page-item active"><a class="page-link" href="/tours-ha-long/<%=i%>"><%=i%></a></li>
+          <% }else { %>
+            <li class="page-item"><a class="page-link" href="/tours-ha-long/<%=i%>"><%=i%></a></li>
+          
+          
+        <% }} %>
+
+        <% if(current == pages) { %>
+          <li class="page-item disabled">
               <a class="page-link" href="#">Next</a>
           </li>
+        <% }else { %>
+          <li class="page-item">
+            <a class="page-link">Next</a>
+          </li>
+        <% } %>
       </ul>
   </nav>
+
+
 </div>
