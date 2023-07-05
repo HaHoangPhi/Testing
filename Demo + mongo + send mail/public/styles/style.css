@@ -53,24 +53,33 @@
     color: #00A2E3;
 }
 
+.sub-background {
+    height: 70vh;
+    object-fit: cover;
+}
 
 /*responsive carousel*/
 
 @media (max-width: 767.98px)  { 
     .c-item {
-        height: 20vh;
+        height: 30vh;
+    }
+    .sub-background {
+        height: 30vh;
     }
 }
 
 @media (max-width: 1199.98px){
-    .c-item {
-        height: 40vh;
-    }
+    
 }
 
 @media (orientation:landscape) {
     .c-item {
         height: 80vh;
+    }
+
+    .sub-background {
+        height: 70vh;
     }
 }
 

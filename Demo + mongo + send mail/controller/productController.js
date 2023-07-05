@@ -58,8 +58,70 @@ const getSapaproduct = async (req, res) => {
   });
 };
 
+const getTrongnuocproduct = async (req, res) => {
+  let page = req.params.page || 1;
+  let perPage = 16;
+  const data = await productModel
+    .find()
+    .skip(perPage * page - perPage)
+    .limit(perPage);
+
+  let count = await productModel.countDocuments();
+  console.log(count);
+
+  res.render("../pages/tour-trong-nuoc", {
+    title: "Đặt Tour trong nước",
+    tours: data,
+    current: page,
+    pages: Math.ceil(count / perPage),
+  });
+};
+
+const getNuocngoaiproduct = async (req, res) => {
+  let page = req.params.page || 1;
+  let perPage = 16;
+  const data = await productModel
+    .find()
+    .skip(perPage * page - perPage)
+    .limit(perPage);
+
+  let count = await productModel.countDocuments();
+  console.log(count);
+
+  res.render("../pages/tour-nuoc-ngoai", {
+    title: "Đặt Tour nước ngoài",
+    tours: data,
+    current: page,
+    pages: Math.ceil(count / perPage),
+  });
+};
+
+const getTourkhacproduct = async (req, res) => {
+  let page = req.params.page || 1;
+  let perPage = 16;
+  const data = await productModel
+    .find()
+    .skip(perPage * page - perPage)
+    .limit(perPage);
+
+  let count = await productModel.countDocuments();
+  console.log(count);
+
+  res.render("../pages/tour-khac", {
+    title: "Đặt Tour khác",
+    tours: data,
+    current: page,
+    pages: Math.ceil(count / perPage),
+  });
+};
+
+
+
 module.exports = {
   getHomeproduct,
   getHalongproduct,
   getSapaproduct,
+  getNuocngoaiproduct,
+  getTrongnuocproduct,
+  getTourkhacproduct
 };

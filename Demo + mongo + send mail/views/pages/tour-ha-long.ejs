@@ -1,7 +1,7 @@
 <div class="position-relative">
-  <img src="../../public/images/banner.jpg" class="w-100" />
+  <img src="../../public/images/banner/banner.jpg" class="w-100 sub-background" />
   <div class="position-absolute top-50 start-50 translate-middle">
-      <h1 class="text-center text-white fw-bold display-2">DU LỊCH HẠ LONG</h1>
+      <h1 class="text-center text-white fw-bold" style="font-size: 5vw;">DU LỊCH HẠ LONG</h1>
   </div>
 </div>
 <div class="container">
@@ -28,7 +28,7 @@
                 <span class="card-text">
                   <%=item.Gia%> VND
                 </span>
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Đặt
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
                   Tour</a>
               </div>
             </div>

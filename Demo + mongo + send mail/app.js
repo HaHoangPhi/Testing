@@ -1,6 +1,3 @@
-//fake data tour
-const fakeData = require("./fakedata/fakeToursdata.json");
-
 //Thêm thư viện
 const express = require("express");
 const userAgent = require('express-useragent');
@@ -13,6 +10,9 @@ require('dotenv').config();
 /*Routes*/
 const halongRoute = require('./routes/halongRoute');
 const sapaRoute = require('./routes/sapaRoute');
+const nuocngoaiRoute = require('./routes/nuocngoaiRoute');
+const trongnuocRoute = require('./routes/trongnuocRoute');
+const tourkhacRoute = require('./routes/tourkhacRoute');
 
 const productController = require('./controller/productController');
 
@@ -58,6 +58,10 @@ app.post("/", async(req, res) => {
 
 app.use('/tours-ha-long',halongRoute);
 app.use('/tours-sapa',sapaRoute);
+app.use('/tours-nuoc-ngoai',nuocngoaiRoute);
+app.use('/tours-trong-nuoc',trongnuocRoute);
+app.use('/tours-khac',tourkhacRoute);
+
 
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);
