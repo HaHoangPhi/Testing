@@ -31,5 +31,20 @@ home.get_top_Sapa = function(tours){
         else tours(data);
     })
 }
+home.get_Search = function(tours, nametour){
+    const query = `select chuongtrinh_tour.ma_tour,chuongtrinh_tour.ten_tour,chuongtrinh_tour.gia,chuongtrinh_tour.hinhanh,chuongtrinh_tour.noidung from chuongtrinh_tour,diemdulich where (ten_tour like '%${nametour}%' or diemdulich.ten_diemdl like'%${nametour}%') And diemdulich.ma_diemdl = chuongtrinh_tour.ma_diemdl`
+    console.log(nametour);
+    connection.query(query, function(err, data){
+        if (err) tours(null);
+        else tours(data);
+    })
+}
+home.get_Search2 = function(tours, nametour, nametour2){
+    const query = `select chuongtrinh_tour.ma_tour,chuongtrinh_tour.ten_tour,chuongtrinh_tour.gia,chuongtrinh_tour.hinhanh,chuongtrinh_tour.noidung from chuongtrinh_tour,diemdulich where (diemdulich.ten_diemdl like'%${nametour}%' or diemdulich.ten_diemdl like'%${nametour2}%') And diemdulich.ma_diemdl = chuongtrinh_tour.ma_diemdl`
+    connection.query(query, function(err, data){
+        if (err) tours(null);
+        else tours(data);
+    })
+}
 module.exports = home;
 

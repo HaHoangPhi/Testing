@@ -1,6 +1,6 @@
 //fake data tour
 const fakeData = require("./fakedata/fakeToursdata.json");
-
+const bodyParser = require("body-parser");
 //Thêm thư viện
 const express = require("express");
 const ejs = require("ejs");
@@ -12,7 +12,8 @@ const app = express();
 app.set("views", "./views/layouts");
 app.set("view engine", "ejs");
 app.use(ejsLayouts);
-
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 //
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,10 +26,7 @@ const PORT = 3000;
 //nodemailer
 const homerouter = require('./router/home.router');
 app.use('/',homerouter);
-//Get home page
-//app.get("/", (req, res) => {
-//  return res.render("../index", { title: "Trang chủ", tours: fakeData });
-//});
+
 app.post("/",(req, res) => {
   const hovaten = req.body;
   console.log(hovaten);

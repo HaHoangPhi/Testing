@@ -68,4 +68,9 @@ $(document).ready(function () {
       $('.link-menu-con5').toggleClass('show');    
       $('#button-Homeback5 i').fadeToggle('hideHome2');
     })
+    $('.LogoSearch').click(function(){
+      $('.MenuSearch').toggleClass('hideSearch');
+      $('.IpSearch').toggleClass('hideBTsearch'); 
+      $('.BtSearch').toggleClass('hideBTsearch');      
+    })
   })
