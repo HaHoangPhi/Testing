@@ -26,7 +26,7 @@ const get_Search = function (req,res){
     else
     {
         homeModel.get_Search2(function (data){
-            return res.render('../pages/tour-ha-long',{title: 'Tour tìm kiếm',tours:data,Tieudes:`${nametour}`});
+            return res.render('../pages/tour-ha-long',{title: 'Tour tìm kiếm',tours:data,Tieudes:`${nametour+" "+nametour2}`});
         },nametour,nametour2);
     }
 }

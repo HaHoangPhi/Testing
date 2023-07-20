@@ -27,6 +27,10 @@ const PORT = 3000;
 const homerouter = require('./router/home.router');
 app.use('/',homerouter);
 
+app.get('/login',(req,res)=>{
+  res.render('../pages/login',{title:"login page"});
+})
+
 app.post("/",(req, res) => {
   const hovaten = req.body;
   console.log(hovaten);

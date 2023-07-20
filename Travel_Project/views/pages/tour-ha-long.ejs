@@ -1,7 +1,7 @@
 <div class="position-relative">
     <img src="../../public/images/banner.jpg" class="w-100" />
     <div class="position-absolute top-50 start-50 translate-middle">
-        <h1 class="text-white fw-bold"></h1>
+        <h1 class="text-white fw-bold"><%=Tieudes%></h1>
     </div>
 </div>
 <div class="container">
@@ -9,7 +9,7 @@
     <div class="my-5">
       <div class="my-3">
         <h2 id="tourHalong" class="text-center fw-bold">
-          <%=Tieudes%>
+          Tour <%=Tieudes%>
         </h2>
       </div>
 
@@ -17,7 +17,7 @@
         <% tours.map(item=>{ %>
           <div class="col">
             <div class="card h-100">
-              <img src=<%=item.hinhanh%> class="card-img-top" alt="...">
+              <img src=<%=item.hinh_anh%> class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">
                   <%=item.ten_tour%>
