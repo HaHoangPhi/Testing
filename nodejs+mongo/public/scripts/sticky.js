@@ -11,12 +11,14 @@ $(document).ready(function(){
   $('#toggle').click(function(){
     $('#menu-toggle').toggleClass('hide');
     $('.link-mobile').toggleClass('show');    
-    $('.button-Homeback i').fadeToggle('hideHome');     
+    $('.button-Homeback i').fadeToggle('hideHome');
+    $('.menu-toggle-mobile').toggleClass('menu-toggle-mobile-show'); 
   })
   $('#back').click(function(){
     $('#menu-toggle').toggleClass('hide');
     $('.link-mobile').toggleClass('show');    
     $('.button-Homeback i').fadeToggle('hideHome');
+    $('.menu-toggle-mobile').toggleClass('menu-toggle-mobile-show');
   })
   $('.colum1').click(function(){
     $('#menu-con1').toggleClass('hide');

@@ -8,16 +8,9 @@ const morgan = require('morgan');
 require('dotenv').config();
 
 /*Routes*/
-const halongRoute = require('./routes/halongRoute');
-const sapaRoute = require('./routes/sapaRoute');
-const nuocngoaiRoute = require('./routes/nuocngoaiRoute');
-const trongnuocRoute = require('./routes/trongnuocRoute');
-const tourkhacRoute = require('./routes/tourkhacRoute');
 
 
 /*Controllers*/
-const productController = require('./controller/productController');
-
 
 const sendMail = require("./mail");
 
@@ -45,26 +38,14 @@ app.use("/public", express.static(__dirname + "/public"));
 
 const PORT = 3000;
 
-//Get home page
-// app.get("/",productController.getHomeproduct);
 
-// app.post("/", async(req, res) => {
-//   console.log(req.body);
-//   const data = req.body;
-//   await sendMail(data);
-//   res.json({ok:true})
-// })
+app.post("/", async(req, res) => {
+  console.log(req.body);
+  const data = req.body;
+  await sendMail(data);
+  res.json({ok:true})
+})
 
-// app.use('/tours-ha-long',halongRoute);
-// app.use('/tours-sapa',sapaRoute);
-// app.use('/tours-nuoc-ngoai',nuocngoaiRoute);
-// app.use('/tours-trong-nuoc',trongnuocRoute);
-// app.use('/tours-khac',tourkhacRoute);
-
-
-// app.listen(PORT, () => {
-//   console.log(`App is running on port ${PORT}`);
-// });
 const homerouter = require('./routes/home.router');
 app.use('/',homerouter);
 

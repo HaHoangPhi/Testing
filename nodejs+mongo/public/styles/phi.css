@@ -363,8 +363,14 @@ ul#connect2 a{
         width: 100%;
         padding-top: 30%;
         padding-left: 15px;
-        padding-right: 15px;       
+        padding-right: 15px;
+        display: flex;       
     }
+
+    .menu-toggle-mobile-show{
+        display: block;
+    }
+
     .link-mobile{
         color: #00A2E3;
         font-size: 0.9em;
