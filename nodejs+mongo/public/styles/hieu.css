@@ -1,0 +1,29 @@
+.Para{
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.4;
+    color: rgb(97, 97, 97);
+    text-align: center;
+}
+.Name{
+    font-family: "Lobster", cursive;
+    font-size: 16px;
+    line-height: 1.2;
+    color: rgb(182, 51, 39);
+    text-align: center;
+}
+.Title{
+    background-image: radial-gradient(circle, rgb(252, 103, 103), rgb(236, 0, 140));
+    background-color: initial;
+    background-size: initial;
+    background-origin: initial;
+    background-position: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    color: rgb(33, 33, 33);
+    text-align: center;
+}
