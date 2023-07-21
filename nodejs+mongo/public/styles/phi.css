@@ -364,7 +364,7 @@ ul#connect2 a{
         padding-top: 30%;
         padding-left: 15px;
         padding-right: 15px;
-        display: flex;       
+        display: none;       
     }
 
     .menu-toggle-mobile-show{
