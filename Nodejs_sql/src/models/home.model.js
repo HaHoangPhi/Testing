@@ -1,4 +1,4 @@
-const connection = require('../dbConnect');
+const connection = require('../database/dbConnect');
 const home = function(chuongtrinh_tour){
     this.ma_tour = chuongtrinh_tour.ma_tour;
     this.ten_tour = chuongtrinh_tour.ten_tour;

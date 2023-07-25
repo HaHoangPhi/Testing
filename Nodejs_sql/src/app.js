@@ -24,7 +24,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 //hadling error
 
-const sendMail = require("./mail");
+const sendMail = require("./services/mail");
 
 
 //template engine
