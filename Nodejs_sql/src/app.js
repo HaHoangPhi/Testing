@@ -26,8 +26,8 @@ app.use("/public", express.static(__dirname + "/public"));
 //init database
 
 //init routes
-app.use("/",require('./routes/home.router'));
-app.use("/sendmail",require('./routes/sendMail.router'));
+app.use("/", require("./routes/home.router"));
+app.use("/sendmail", require("./routes/sendMail.router"));
 //hadling error
 
 module.exports = app;

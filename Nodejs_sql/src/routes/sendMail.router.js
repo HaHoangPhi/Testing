@@ -8,8 +8,5 @@ router.post('/',async(req,res)=>{
     await sendMail(data);
     res.json({ ok: true });
 })
-router.get('/',(req,res) => {
-    res.send('sendmail');
-})
 
 module.exports = router
