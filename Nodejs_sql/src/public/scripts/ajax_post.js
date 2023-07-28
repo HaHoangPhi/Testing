@@ -2,7 +2,7 @@ $('document').ready(()=>{
     $('#datTour').on('submit',(e)=>{
         e.preventDefault();
         $.ajax({
-            url:"/",
+            url:"/sendmail",
             method:"POST",
             data:$('form').serialize(),
             success:()=>{
