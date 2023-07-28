@@ -1,0 +1,11 @@
+const ctt_controller = require('../controller/Chuong_trinh_tour_controller');
+const express = require('express');
+const uploadfile = require('../upload_file');
+const ctt_router = express.Router();
+ctt_router.get('/Chuong_trinh_tour',ctt_controller.get_all_ctt);
+ctt_router.get('/Chuong_trinh_tour/add',ctt_controller.get_add_ctt);
+ctt_router.post('/Chuong_trinh_tour/add/them',uploadfile.single('hinh_anh'),ctt_controller.add_ctt);
+ctt_router.get('/Chuong_trinh_tour/Update/:ma_tour',ctt_controller.show_update_ctt);
+ctt_router.post('/Chuong_trinh_tour/Update/Sua/:ma_tour',uploadfile.single('hinh_anh'),ctt_controller.update_ctt);
+ctt_router.get('/Chuong_trinh_tour/Delete/:ma_tour',ctt_controller.delete_ctt);
+module.exports = ctt_router;

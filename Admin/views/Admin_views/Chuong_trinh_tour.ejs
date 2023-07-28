@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table_cct">
+        <th>Mã Tour</th>
+        <th>Tên Tour</th>
+        <th>Giá</th>
+        <th>Hình Ảnh</th>
+        <th>Nội dung</th>
+        <% chuong_chinh_tours.forEach(item => {%>
+            <tr>
+                <td><%=item.ma_tour%></td>
+                <td><%=item.ten_tour%></td>
+                <td><%=item.gia%></td>
+                <td><%=item.hinh_anh%></td>
+                <td><%=item.noidung%></td>
+                <td><%=item.ten_diemdl%></td>
+                <td>
+                    <a href="Chuong_trinh_tour/Update/ma_tour=<%=item.ma_tour%>"><button class="">Sửa</button></a>
+                    <a href="Chuong_trinh_tour/Delete/ma_tour=<%=item.ma_tour%>"><button class="">Xóa</button></a>
+                </td>
+            </tr>
+        <%});%>
+    </table>
+    <a href="Chuong_trinh_tour/add"><button class="">Thêm</button></a>
+</body>
+</html>

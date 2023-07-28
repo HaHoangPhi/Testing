@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% Updates.forEach(item => {%>
+    <form action="/admin/Chuong_trinh_tour/Update/Sua/ma_tour=<%=item.ma_tour%>" method="post" enctype="multipart/form-data">
+        <td>Tên tour:<input type="text" name="ten_tour" value="<%=item.ten_tour%>"></td><br>
+        <td>Giá:<input type="text" name="gia" value="<%=item.gia%>"></td><br>
+        <td>Hình ảnh:<input type="file" name="hinh_anh"></td><br>
+        <td>Nội dung:<input type="text" name="noidung" value="<%=item.Noidung%>"></td><br>
+        <td>Địa điểm:<input type="text" name="ten_diemdl" value="<%=item.ten_diemdl%>"></td><br>
+        <td><input type="submit" value="Sửa"></td><br>
+    </form>
+    <%});%>
+</body>
+</html>
