@@ -3,7 +3,7 @@ const mysql = require('mysql2');
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'duong123',
+    password: 'Phi12345',
     database: 'webtour'
  });
  
